@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{115ce4b1-107f-456b-a286-7253e18015d6}">
+		<property name="assetPath">
+			<value>SoundEffect/Example/爆炸-方波.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.49632653061224491</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a707cf8a-b5cf-416c-b3bf-8ad85624b296}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{f67947ed-fa25-4257-b60b-001f17d0fc1c}">
+		<property name="assetPath">
+			<value>SoundEffect/Example/bullet.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.0375510204081633</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a707cf8a-b5cf-416c-b3bf-8ad85624b296}</destination>
+		</relationship>
+	</object>
+</objects>
