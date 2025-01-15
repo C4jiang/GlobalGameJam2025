@@ -91,6 +91,9 @@ public static class MsgType
     public static string TestSpineTrigger = nameof(TestSpineTrigger);
     public static string PlayerChatComplete = nameof(PlayerChatComplete);
 
+    // Test Only
+    public static string TestEvent = nameof(TestEvent);
+
     private static IEnumerable<string> _allEventNames;
     public static IEnumerable<string> GetEventNames()
     {
