@@ -65,6 +65,7 @@ public class Water : MonoBehaviour {
             Messenger.Broadcast<float>(MsgType.BubbleFail, stability);
             Debug.Log("BubbleFail " + stability);
         }
+        ResetWater();
     }
 
     private float CalcStability(int normalWaterCnt, int unstableWaterCnt) {
