@@ -17,6 +17,7 @@ public class LevelData : ScriptableObject
     {
         public int levelNumber;
         public Pattern pattern;
+        public GameObject prefab;
     }
 
     [SerializeField] private Level[] levels;
