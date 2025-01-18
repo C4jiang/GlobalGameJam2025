@@ -13,6 +13,18 @@ public class Water : MonoBehaviour {
     private int _normalWaterCnt = 0;
     private int _unstableWaterCnt = 0; 
 
+    /// <summary>
+    /// 如果有需求，直接从外部设置这三个参数
+    /// </summary>
+    /// <param name="NormalWaterStableRatio">稳定魔药系数(填负数)</param>
+    /// <param name="UnstableWaterStableRatio">不稳定魔药系数"</param>
+    /// <param name="BubbleStableThreshold">泡泡稳定阈值</param>
+    public void SetWaterArgs(float NormalWaterStableRatio, float UnstableWaterStableRatio, float BubbleStableThreshold) {
+        this.NormalWaterStableRatio = NormalWaterStableRatio;
+        this.UnstableWaterStableRatio = UnstableWaterStableRatio;
+        this.BubbleStableThreshold = BubbleStableThreshold;
+    }
+
     public void AddNormalWater() {
         _normalWaterCnt = Math.Min(_normalWaterCnt + 1, MaxWaterCnt);
         Messenger.Broadcast<int, int>(MsgType.RefreshWaterCnt, _normalWaterCnt, _unstableWaterCnt);
@@ -39,17 +51,16 @@ public class Water : MonoBehaviour {
         Messenger.Broadcast<int, int>(MsgType.RefreshWaterCnt, _normalWaterCnt, _unstableWaterCnt);
     }
 
-    public void BubbleWater() {
+    public void Blow() {
         var stability = CalcStability(_normalWaterCnt, _unstableWaterCnt);
         if (stability <= BubbleStableThreshold) {
-            Messenger.Broadcast(MsgType.BubbleSuccess);
+            Messenger.Broadcast<float>(MsgType.BubbleSuccess, stability);
         } else {
-            Messenger.Broadcast(MsgType.BubbleFail);
+            Messenger.Broadcast<float>(MsgType.BubbleFail, stability);
         }
     }
 
     private float CalcStability(int normalWaterCnt, int unstableWaterCnt) {
-        // todo
         return _normalWaterCnt * NormalWaterStableRatio + _unstableWaterCnt * UnstableWaterStableRatio;
     }
 }
