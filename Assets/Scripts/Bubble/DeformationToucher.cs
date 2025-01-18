@@ -30,7 +30,8 @@ public class DeformationToucher : MonoBehaviour
     
     private Vector3 lightDirection;
     
-    private List<Vector3> bubbleEdgePoints = new List<Vector3>();
+    private List<Vector2> bubbleEdgePoints = new List<Vector2>();
+    public List<Vector2> myEdgePoints = new List<Vector2>();
 
     void Start()
     {
@@ -100,8 +101,9 @@ public class DeformationToucher : MonoBehaviour
     [Button("生成泡泡边缘点")]
     void CalculateBubbleEdge()
     {
-
         ExtractEdgePoints();
+        var similarity = PolygonSimilarity.CalculateSimilarity(bubbleEdgePoints, myEdgePoints);
+        Debug.Log($"Similarity: {similarity}");
     }
     
     void ExtractEdgePoints()
@@ -119,17 +121,17 @@ public class DeformationToucher : MonoBehaviour
         {
             if (Mathf.Abs(normals[i].z) < 0.02f) // 近似判断边缘点
             {
-                bubbleEdgePoints.Add(new Vector3(targetMesh.vertices[i].x, targetMesh.vertices[i].y, 0));
+                bubbleEdgePoints.Add(new Vector2(targetMesh.vertices[i].x, targetMesh.vertices[i].y));
             }
         }
         // 对边缘点进行排序
         bubbleEdgePoints = SortEdgePoints(bubbleEdgePoints, edgePointMinDistance);
     }
     
-    List<Vector3> SortEdgePoints(List<Vector3> edgePoints, float minDistance)
+    List<Vector2> SortEdgePoints(List<Vector2> edgePoints, float minDistance)
     {
         // 假设边缘点形成一个闭合曲线，可以使用贪心算法进行排序
-        List<Vector3> sortedPoints = new List<Vector3>();
+        List<Vector2> sortedPoints = new List<Vector2>();
         Vector3 currentPoint = edgePoints[0];
         sortedPoints.Add(currentPoint);
         edgePoints.RemoveAt(0);
@@ -137,16 +139,16 @@ public class DeformationToucher : MonoBehaviour
         while (edgePoints.Count > 0)
         {
             // 移除所有距离当前点小于阈值的点
-            edgePoints.RemoveAll(p => Vector3.Distance(currentPoint, p) <= minDistance);
+            edgePoints.RemoveAll(p => Vector2.Distance(currentPoint, p) <= minDistance);
             if (edgePoints.Count == 0)
             {
                 break;
             }
             // 找到距离当前点大于阈值的下一个点
-            Vector3 nextPoint = edgePoints
-                .OrderBy(p => Vector3.Distance(currentPoint, p))
+            Vector2 nextPoint = edgePoints
+                .OrderBy(p => Vector2.Distance(currentPoint, p))
                 .First();
-            if (nextPoint != default(Vector3))
+            if (nextPoint != default(Vector2))
             {
                 // sortedPoints.Add(new Vector3(nextPoint.x, nextPoint.y, 0));
                 sortedPoints.Add(nextPoint);
@@ -156,23 +158,7 @@ public class DeformationToucher : MonoBehaviour
 
         return sortedPoints;
     }
-    Vector3 FindNextClosestPoint(List<Vector3> points, Vector3 referencePoint)
-    {
-        Vector3 closestPoint = default(Vector3);
-        float closestDistance = float.MaxValue;
 
-        foreach (var point in points)
-        {
-            float distance = Vector3.Distance(referencePoint, point);
-            if (distance < closestDistance)
-            {
-                closestDistance = distance;
-                closestPoint = point;
-            }
-        }
-
-        return closestPoint;
-    }
     void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
