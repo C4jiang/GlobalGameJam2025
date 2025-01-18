@@ -446,6 +446,7 @@ MonoBehaviour:
   forceOffset: 0.1
   springForce: 20
   damping: 5
+  maxBounceForce: 1
 --- !u!1 &3748471018767581290
 GameObject:
   m_ObjectHideFlags: 0
@@ -871,10 +872,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetMeshFilter: {fileID: 297339144253939584}
   mainCamera: {fileID: 3748471020157133602}
-  force: 0.15
-  forceOffset: 1.5
-  springForce: 20
-  damping: 5
+  force: 0.04
+  forceOffset: 1
+  springForce: 2
+  damping: 8
+  maxBounceForce: 0.5
 --- !u!1001 &5506378036222253565
 PrefabInstance:
   m_ObjectHideFlags: 0
