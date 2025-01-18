@@ -447,6 +447,8 @@ MonoBehaviour:
   springForce: 20
   damping: 5
   maxBounceForce: 1
+  edgePointMinDistance: 0.1
+  bubbleEdgePoints: []
 --- !u!1 &3748471018767581290
 GameObject:
   m_ObjectHideFlags: 0
@@ -877,6 +879,8 @@ MonoBehaviour:
   springForce: 2
   damping: 8
   maxBounceForce: 0.5
+  edgePointMinDistance: 0.003
+  bubbleEdgePoints: []
 --- !u!1001 &5506378036222253565
 PrefabInstance:
   m_ObjectHideFlags: 0
