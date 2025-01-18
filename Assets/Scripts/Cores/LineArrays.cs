@@ -16,7 +16,7 @@ public class LineArrays : MonoBehaviour
         lineRenderer.material = new Material(Shader.Find("Sprites/Default"));
         lineRenderer.startColor = Color.red;
         lineRenderer.endColor = Color.red;
-        lineRenderer.widthMultiplier = 1.0f;
+        lineRenderer.widthMultiplier = 5.0f;
         
         LevelData.Level level = GetLevel(levelNumber);
         if (level != null)

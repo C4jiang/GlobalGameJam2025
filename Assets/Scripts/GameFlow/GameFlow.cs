@@ -23,6 +23,10 @@ public class GameFlow : MonoBehaviour {
             _curLevelNum++;
             Messenger.Broadcast(MsgType.CreateCustomer, _curLevelNum);
         } 
+        if (_curLevelNum>6) {
+        Messenger.Broadcast(MsgType.StartEnding);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("LastScene");
+    }
     }
 
     private void OnNoCustomer() {

@@ -88,6 +88,12 @@ public class Customer : MonoBehaviour
 
     private void CleanCustom() {
         // todo 清理上次的客户
+        if (_curCustomAvatar != null)
+        {
+            Destroy(_curCustomAvatar);
+            _curCustomAvatar = null;
+        }
+        _curCustomDialog = null;
     }
 #endregion
 }
