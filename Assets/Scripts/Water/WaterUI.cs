@@ -14,7 +14,7 @@ public class WaterUI : MonoBehaviour {
             NormalWaterParent.GetChild(i).gameObject.GetComponent<Image>().color = color;
         }
         for (int i = 0; i < UnstableWaterParent.childCount; i++) {
-            var color = i < normalCnt? Color.blue: Color.white;
+            var color = i < unstableCnt? Color.blue: Color.white;
             UnstableWaterParent.GetChild(i).gameObject.GetComponent<Image>().color = color;
         }
     }
