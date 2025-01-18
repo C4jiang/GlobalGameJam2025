@@ -2,14 +2,15 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Unlit_FlowTest
   m_Shader: {fileID: 4800000, guid: 4a138d598a524e941a1fa3a64cff5af3, type: 3}
-  m_ShaderKeywords: 
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -32,7 +33,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalTex:
-        m_Texture: {fileID: 2800000, guid: 21a68ecb822677f4e83ef36bea1ae32b, type: 3}
+        m_Texture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _RampTex:
@@ -41,15 +42,15 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _BubbleAlpha: 1.32
-    - _ColorReflectIntensity: 11.2
-    - _FlowSpeed: 3
-    - _FresnelIntenisty: 125.6
-    - _FresnelPow: 6.49
+    - _BubbleAlpha: 0.82
+    - _ColorReflectIntensity: 13.5
+    - _FlowSpeed: 1
+    - _FresnelIntenisty: 11.6
+    - _FresnelPow: 2.49
     - _RampAxis: 0.36
     - _RampXAxisNoiseStrength: 0.4
     - _RampXAxisOffset: 0.009
-    - _ReflectAmount: 0.047
+    - _ReflectAmount: 0.06
     - _Test: 4.1
     - _TimeSpeed: 22.2
     m_Colors:
