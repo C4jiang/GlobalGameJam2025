@@ -28,35 +28,42 @@ public class Water : MonoBehaviour {
     public void AddNormalWater() {
         _normalWaterCnt = Math.Min(_normalWaterCnt + 1, MaxWaterCnt);
         Messenger.Broadcast<int, int>(MsgType.RefreshWaterCnt, _normalWaterCnt, _unstableWaterCnt);
+        Debug.Log("RefreshWaterCnt " + _normalWaterCnt + " " + _unstableWaterCnt);
     }
 
     public void AddUnstableWater() {
         _unstableWaterCnt = Math.Min(_unstableWaterCnt + 1, MaxWaterCnt);
         Messenger.Broadcast<int, int>(MsgType.RefreshWaterCnt, _normalWaterCnt, _unstableWaterCnt);
+        Debug.Log("RefreshWaterCnt " + _normalWaterCnt + " " + _unstableWaterCnt);
     }
 
     public void RemoveNormalWater() {
         _normalWaterCnt = Math.Max(_normalWaterCnt - 1, 0);
         Messenger.Broadcast<int, int>(MsgType.RefreshWaterCnt, _normalWaterCnt, _unstableWaterCnt);
+        Debug.Log("RefreshWaterCnt " + _normalWaterCnt + " " + _unstableWaterCnt);
     }
 
     public void RemoveUnstableWater() {
         _unstableWaterCnt = Math.Max(_unstableWaterCnt - 1, 0);
         Messenger.Broadcast<int, int>(MsgType.RefreshWaterCnt, _normalWaterCnt, _unstableWaterCnt);
+        Debug.Log("RefreshWaterCnt " + _normalWaterCnt + " " + _unstableWaterCnt);
     }
 
     public void ResetWater() {
         _normalWaterCnt = 0;
         _unstableWaterCnt = 0;
         Messenger.Broadcast<int, int>(MsgType.RefreshWaterCnt, _normalWaterCnt, _unstableWaterCnt);
+        Debug.Log("RefreshWaterCnt " + _normalWaterCnt + " " + _unstableWaterCnt);
     }
 
     public void Blow() {
         var stability = CalcStability(_normalWaterCnt, _unstableWaterCnt);
         if (stability <= BubbleStableThreshold) {
             Messenger.Broadcast<float>(MsgType.BubbleSuccess, stability);
+            Debug.Log("BubbleSuccess " + stability);
         } else {
             Messenger.Broadcast<float>(MsgType.BubbleFail, stability);
+            Debug.Log("BubbleFail " + stability);
         }
     }
 
