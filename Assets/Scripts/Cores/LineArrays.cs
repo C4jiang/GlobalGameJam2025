@@ -21,9 +21,17 @@ public class LineArrays : MonoBehaviour
         LevelData.Level level = GetLevel(levelNumber);
         if (level != null)
         {
-            lineRenderer.positionCount = level.pattern.positions.Length;
-            lineRenderer.SetPositions(level.pattern.positions);
-            lineRenderer.SetPosition(0, level.pattern.positions[0]);
+            Vector3[] linePositions = new Vector3[level.pattern.positions.Length + 1];
+
+            for (int i = 0; i < level.pattern.positions.Length; i++)
+            {
+                linePositions[i] = level.pattern.positions[i];
+            }
+            // 将最后一个点设置为第一个点，以形成封闭图形
+            linePositions[level.pattern.positions.Length] = level.pattern.positions[0];
+
+            lineRenderer.positionCount = linePositions.Length;
+            lineRenderer.SetPositions(linePositions);
         }
     }
 

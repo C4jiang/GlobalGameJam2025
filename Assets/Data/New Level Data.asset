@@ -20,3 +20,4 @@ MonoBehaviour:
       - {x: 1000, y: 500, z: 0}
       - {x: 1900, y: 500, z: 0}
       - {x: 1450, y: 1000, z: 0}
+    prefab: {fileID: 2273790486527826473, guid: cb5f784bcd7dad448983cb7a24508eba, type: 3}
