@@ -21,6 +21,7 @@ public class DeformationToucher : MonoBehaviour
     public float maxBounceForce = 3f;
     
     private float totalOriginalDistance;
+    private float averageOriginalDistance;
 
     void Start()
     {
@@ -33,6 +34,16 @@ public class DeformationToucher : MonoBehaviour
         displacedVertices = targetMesh.vertices;
         meshCollider.sharedMesh = targetMesh;
         vertexVelocities = new Vector3[verticesCount];
+        
+        // 计算中心点
+        centerPoint = Vector3.zero;
+        foreach (var vertex in originalVertices)
+        {
+            centerPoint += vertex;
+        }
+        centerPoint /= verticesCount;
+        
+        averageOriginalDistance = (originalVertices[0] - centerPoint).magnitude;
     }
 
     void Update()
@@ -53,9 +64,17 @@ public class DeformationToucher : MonoBehaviour
             }
         }
 
+        float currentAverageDistance = 0f;
         for (int i = 0; i < verticesCount; i++)
         {
-            vertexVelocities[i] += springForce * Time.deltaTime * (originalVertices[i] - displacedVertices[i]);//加上+顶点当前位置指向顶点初始位置的速度向量==回弹力
+            currentAverageDistance += (displacedVertices[i] - centerPoint).magnitude;
+        }
+        currentAverageDistance /= verticesCount;
+
+        for (int i = 0; i < verticesCount; i++)
+        {
+            float centerForce = (currentAverageDistance - averageOriginalDistance) / averageOriginalDistance;
+            vertexVelocities[i] += centerForce * springForce * Time.deltaTime * (centerPoint - displacedVertices[i]);//加上+顶点当前位置指向顶点初始位置的速度向量==回弹力
             vertexVelocities[i] *= 1f - damping * Time.deltaTime;//乘上阻力
             displacedVertices[i] += vertexVelocities[i] * Time.deltaTime;//算出顶点的下一个位置
         }
