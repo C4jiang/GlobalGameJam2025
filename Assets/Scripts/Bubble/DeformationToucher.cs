@@ -28,9 +28,9 @@ public class DeformationToucher : MonoBehaviour
     private float totalOriginalDistance;
     private float averageOriginalDistance;
     
-    Vector3 lightDirection;
+    private Vector3 lightDirection;
     
-    public List<Vector3> bubbleEdgePoints = new List<Vector3>();
+    private List<Vector3> bubbleEdgePoints = new List<Vector3>();
 
     void Start()
     {
@@ -100,23 +100,28 @@ public class DeformationToucher : MonoBehaviour
     [Button("生成泡泡边缘点")]
     void CalculateBubbleEdge()
     {
+
         ExtractEdgePoints();
     }
     
     void ExtractEdgePoints()
     {
-        bubbleEdgePoints.Clear();
-
+        // var stopwatch = new System.Diagnostics.Stopwatch();
         // 简单的边缘检测算法（例如，基于顶点法线方向）
+        bubbleEdgePoints.Clear();
+        Debug.Log(verticesCount);
+        // stopwatch = new System.Diagnostics.Stopwatch();
+        // stopwatch.Start();
+        Vector3[] normals = targetMesh.normals;
+        // stopwatch.Stop();
+        // Debug.Log($"ExtractEdgePoints took {stopwatch.ElapsedTicks} ticks");
         for (int i = 0; i < verticesCount; i++)
         {
-            Vector3 normal = targetMesh.normals[i];
-            if (Mathf.Abs(Vector3.Dot(normal, lightDirection)) < 0.03f) // 近似判断边缘点
+            if (Mathf.Abs(normals[i].z) < 0.02f) // 近似判断边缘点
             {
-                bubbleEdgePoints.Add(targetMesh.vertices[i]);
+                bubbleEdgePoints.Add(new Vector3(targetMesh.vertices[i].x, targetMesh.vertices[i].y, 0));
             }
         }
-        
         // 对边缘点进行排序
         bubbleEdgePoints = SortEdgePoints(bubbleEdgePoints, edgePointMinDistance);
     }
@@ -133,21 +138,41 @@ public class DeformationToucher : MonoBehaviour
         {
             // 移除所有距离当前点小于阈值的点
             edgePoints.RemoveAll(p => Vector3.Distance(currentPoint, p) <= minDistance);
-            if(edgePoints.Count == 0) break;
+            if (edgePoints.Count == 0)
+            {
+                break;
+            }
             // 找到距离当前点大于阈值的下一个点
             Vector3 nextPoint = edgePoints
                 .OrderBy(p => Vector3.Distance(currentPoint, p))
                 .First();
             if (nextPoint != default(Vector3))
             {
-                sortedPoints.Add(new Vector3(nextPoint.x, nextPoint.y, 0));
+                // sortedPoints.Add(new Vector3(nextPoint.x, nextPoint.y, 0));
+                sortedPoints.Add(nextPoint);
                 currentPoint = nextPoint;
             }
         }
 
         return sortedPoints;
     }
-    
+    Vector3 FindNextClosestPoint(List<Vector3> points, Vector3 referencePoint)
+    {
+        Vector3 closestPoint = default(Vector3);
+        float closestDistance = float.MaxValue;
+
+        foreach (var point in points)
+        {
+            float distance = Vector3.Distance(referencePoint, point);
+            if (distance < closestDistance)
+            {
+                closestDistance = distance;
+                closestPoint = point;
+            }
+        }
+
+        return closestPoint;
+    }
     void OnDrawGizmos()
     {
         Gizmos.color = Color.red;

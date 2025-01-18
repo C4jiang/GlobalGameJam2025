@@ -448,7 +448,6 @@ MonoBehaviour:
   damping: 5
   maxBounceForce: 1
   edgePointMinDistance: 0.1
-  bubbleEdgePoints: []
 --- !u!1 &3748471018767581290
 GameObject:
   m_ObjectHideFlags: 0
@@ -809,19 +808,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ff1017dc9263c684ebe1c2e4162c43a4, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071067
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ff1017dc9263c684ebe1c2e4162c43a4, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ff1017dc9263c684ebe1c2e4162c43a4, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ff1017dc9263c684ebe1c2e4162c43a4, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ff1017dc9263c684ebe1c2e4162c43a4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -880,7 +879,6 @@ MonoBehaviour:
   damping: 8
   maxBounceForce: 0.5
   edgePointMinDistance: 0.003
-  bubbleEdgePoints: []
 --- !u!1001 &5506378036222253565
 PrefabInstance:
   m_ObjectHideFlags: 0
