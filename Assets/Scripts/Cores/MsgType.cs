@@ -94,6 +94,11 @@ public static class MsgType
     // Test Only
     public static string TestEvent = nameof(TestEvent);
 
+    // Water Module
+    public static string RefreshWaterCnt = nameof(RefreshWaterCnt); // 刷新UI界面魔药份数
+    public static string BubbleSuccess = nameof(BubbleSuccess); // 稳定度小于等于阈值，泡泡成功
+    public static string BubbleFail = nameof(BubbleFail); // 稳定度大于阈值，泡泡失败
+
     private static IEnumerable<string> _allEventNames;
     public static IEnumerable<string> GetEventNames()
     {
