@@ -96,8 +96,25 @@ public static class MsgType
 
     // Water Module
     public static string RefreshWaterCnt = nameof(RefreshWaterCnt); // 刷新UI界面魔药份数
-    public static string BubbleSuccess = nameof(BubbleSuccess); // 稳定度小于等于阈值，泡泡成功
-    public static string BubbleFail = nameof(BubbleFail); // 稳定度大于阈值，泡泡失败
+    public static string BlowSuccess = nameof(BlowSuccess); // 稳定度小于等于阈值，吹泡泡成功
+    public static string BlowFail = nameof(BlowFail); // 稳定度大于阈值，吹泡泡失败
+
+    // Bubble Module
+    public static string BubbleSuccess = nameof(BubbleSuccess); // 泡泡匹配成功
+    public static string BubbleFail = nameof(BubbleFail); // 泡泡匹配失败
+
+    // Customer Module
+    public static string CreateCustomer = nameof(CreateCustomer); // 创建顾客
+    public static string NoCustomer = nameof(NoCustomer); // 无顾客
+    public static string DialogComplete = nameof(DialogComplete); // 对话结束
+
+    // intro & ending
+    public static string StartIntro = nameof(StartIntro);   // 播放片头曲
+    public static string StartEnding = nameof(StartEnding); // 播放结束曲
+
+    public static string IntroEnd = nameof(IntroEnd);   // 片头曲结束
+    public static string EndingEnd = nameof(EndingEnd); // 结束曲结束
+
 
     private static IEnumerable<string> _allEventNames;
     public static IEnumerable<string> GetEventNames()

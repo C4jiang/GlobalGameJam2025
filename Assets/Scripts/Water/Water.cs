@@ -59,10 +59,10 @@ public class Water : MonoBehaviour {
     public void Blow() {
         var stability = CalcStability(_normalWaterCnt, _unstableWaterCnt);
         if (stability <= BubbleStableThreshold) {
-            Messenger.Broadcast<float>(MsgType.BubbleSuccess, stability);
+            Messenger.Broadcast<float>(MsgType.BlowSuccess, stability);
             Debug.Log("BubbleSuccess " + stability);
         } else {
-            Messenger.Broadcast<float>(MsgType.BubbleFail, stability);
+            Messenger.Broadcast<float>(MsgType.BlowFail, stability);
             Debug.Log("BubbleFail " + stability);
         }
         ResetWater();
