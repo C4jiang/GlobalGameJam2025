@@ -174,26 +174,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5667733139821162610, guid: 0e83d4528951dac42a8d97c07859d9f7, type: 3}
-      propertyPath: titleBGM.Path
-      value: event:/Music/Example/mainTheme
-      objectReference: {fileID: 0}
-    - target: {fileID: 5667733139821162610, guid: 0e83d4528951dac42a8d97c07859d9f7, type: 3}
-      propertyPath: titleBGM.Guid.Data1
-      value: -709097759
-      objectReference: {fileID: 0}
-    - target: {fileID: 5667733139821162610, guid: 0e83d4528951dac42a8d97c07859d9f7, type: 3}
-      propertyPath: titleBGM.Guid.Data2
-      value: 1237760877
-      objectReference: {fileID: 0}
-    - target: {fileID: 5667733139821162610, guid: 0e83d4528951dac42a8d97c07859d9f7, type: 3}
-      propertyPath: titleBGM.Guid.Data3
-      value: 1098352816
-      objectReference: {fileID: 0}
-    - target: {fileID: 5667733139821162610, guid: 0e83d4528951dac42a8d97c07859d9f7, type: 3}
-      propertyPath: titleBGM.Guid.Data4
-      value: -77373874
-      objectReference: {fileID: 0}
     - target: {fileID: 8506390456043626586, guid: 0e83d4528951dac42a8d97c07859d9f7, type: 3}
       propertyPath: m_Name
       value: GamePlayRoot
