@@ -24,6 +24,9 @@ public class DeformationToucher : MonoBehaviour
     public float damping = 5f;
     public float maxBounceForce = 3f;
     public float edgePointMinDistance = 0.1f;
+
+    public int timer = 0;
+    public int refreshTime = 3;
     
     private float totalOriginalDistance;
     private float averageOriginalDistance;
@@ -75,6 +78,16 @@ public class DeformationToucher : MonoBehaviour
                 }
             }
         }
+        
+        timer++;
+        if (timer >= refreshTime)
+        {
+            timer = 0;
+        }
+        else
+        {
+            return;
+        }
 
         float currentAverageDistance = 0f;
         for (int i = 0; i < verticesCount; i++)
@@ -86,9 +99,9 @@ public class DeformationToucher : MonoBehaviour
         for (int i = 0; i < verticesCount; i++)
         {
             float centerForce = (currentAverageDistance - averageOriginalDistance) / averageOriginalDistance;
-            vertexVelocities[i] += centerForce * springForce * Time.deltaTime * (centerPoint - displacedVertices[i]);//加上+顶点当前位置指向顶点初始位置的速度向量==回弹力
-            vertexVelocities[i] *= 1f - damping * Time.deltaTime;//乘上阻力
-            displacedVertices[i] += vertexVelocities[i] * Time.deltaTime;//算出顶点的下一个位置
+            vertexVelocities[i] += centerForce * springForce * Time.deltaTime * refreshTime * (centerPoint - displacedVertices[i]);//加上+顶点当前位置指向顶点初始位置的速度向量==回弹力
+            vertexVelocities[i] *= 1f - damping * Time.deltaTime * refreshTime;//乘上阻力
+            displacedVertices[i] += Time.deltaTime * refreshTime * vertexVelocities[i];//算出顶点的下一个位置
         }
 
         targetMesh.vertices = displacedVertices;

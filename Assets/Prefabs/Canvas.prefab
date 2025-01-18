@@ -1744,6 +1744,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelData: {fileID: 11400000, guid: 59723ce36a4b77141ab6528464e070d1, type: 2}
   levelNumber: 1
+  TestRun: 0
 --- !u!1 &2676608188410851238
 GameObject:
   m_ObjectHideFlags: 0
@@ -1872,8 +1873,8 @@ Canvas:
   m_GameObject: {fileID: 2676608188484851827}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 2676608188527965272}
+  m_RenderMode: 1
+  m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
