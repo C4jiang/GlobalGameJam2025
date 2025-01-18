@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Scroll : MonoBehaviour
 {
@@ -32,6 +33,10 @@ public class Scroll : MonoBehaviour
         if (textRectTransform != null)
         {
             textRectTransform.anchoredPosition -= Vector2.up * scrollSpeed * Time.deltaTime;
+        }
+        if (Input.GetMouseButtonDown(0))
+        {
+            SceneManager.LoadScene("GameCore");
         }
     }
 }
