@@ -42,14 +42,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _BubbleAlpha: 0.82
+    - _BubbleAlpha: 0.98
     - _ColorReflectIntensity: 13.5
     - _FlowSpeed: 1
-    - _FresnelIntenisty: 11.6
-    - _FresnelPow: 2.49
+    - _FresnelIntenisty: 10
+    - _FresnelPow: 6.49
     - _RampAxis: 0.36
     - _RampXAxisNoiseStrength: 0.4
-    - _RampXAxisOffset: 0.009
+    - _RampXAxisOffset: 0
     - _ReflectAmount: 0.06
     - _Test: 4.1
     - _TimeSpeed: 22.2

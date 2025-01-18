@@ -144,7 +144,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.8867924, g: 0.33045566, b: 0.33045566, a: 1}
+  m_Color: {r: 0.9433962, g: 0.89444643, b: 0.89444643, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -611,7 +611,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.2717604, g: 0.27980745, b: 0.2924528, a: 0}
+  m_BackGroundColor: {r: 0.2677999, g: 0.28545153, b: 0.3207547, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -832,6 +832,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ff1017dc9263c684ebe1c2e4162c43a4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b6f18b02925488a479d29fe10fd60081, type: 2}
     - target: {fileID: 919132149155446097, guid: ff1017dc9263c684ebe1c2e4162c43a4, type: 3}
       propertyPath: m_Name
       value: trangleball 1
@@ -868,7 +872,7 @@ MonoBehaviour:
   targetMeshFilter: {fileID: 297339144253939584}
   mainCamera: {fileID: 3748471020157133602}
   force: 0.15
-  forceOffset: 0.7
+  forceOffset: 1.5
   springForce: 20
   damping: 5
 --- !u!1001 &5506378036222253565
