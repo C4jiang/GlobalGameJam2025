@@ -13,11 +13,17 @@ public class LineArrays : MonoBehaviour
     void Start()
     {
         lineRenderer = gameObject.AddComponent<LineRenderer>();
+        lineRenderer.material = new Material(Shader.Find("Sprites/Default"));
+        lineRenderer.startColor = Color.red;
+        lineRenderer.endColor = Color.red;
+        lineRenderer.widthMultiplier = 1.0f;
+        
         LevelData.Level level = GetLevel(levelNumber);
         if (level != null)
         {
             lineRenderer.positionCount = level.pattern.positions.Length;
             lineRenderer.SetPositions(level.pattern.positions);
+            lineRenderer.SetPosition(0, level.pattern.positions[0]);
         }
     }
 
@@ -38,7 +44,6 @@ public class LineArrays : MonoBehaviour
         {
             if (level.levelNumber == levelNumber)
             {
-                Debug.Log("Level found: " + levelNumber);
                 return level;
             }
         }
