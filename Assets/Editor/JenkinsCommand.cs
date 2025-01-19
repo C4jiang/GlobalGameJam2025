@@ -31,21 +31,21 @@ public static class Builder
     [MenuItem("MyTools/Windows Build With Postprocess")]
     public static void BuildGameWindows(string path, string gameName)
     {
-        string[] levels = new string[] {"Assets/Scenes/GameCore.unity"};
+        string[] levels = new string[] {"Assets/Scenes/GameCore.unity", "Assets/Scenes/LastScene.unity"};
         BuildPipeline.BuildPlayer(levels, path + $"/{gameName}.exe", BuildTarget.StandaloneWindows, BuildOptions.None);
     }
 
     [MenuItem("MyTools/Android Build With Postprocess")]
     public static void BuildGameAndroid(string path, string gameName)
     {
-        string[] levels = new string[] {"Assets/Scenes/GameCore.unity"};
+        string[] levels = new string[] {"Assets/Scenes/GameCore.unity", "Assets/Scenes/LastScene.unity"};
         BuildPipeline.BuildPlayer(levels, path + $"/{gameName}.apk", BuildTarget.Android, BuildOptions.None);
     }
     
     [MenuItem("MyTools/Html Build With Postprocess")]
     public static void BuildGameHtml(string path, string gameName)
     {
-        string[] levels = new string[] {"Assets/Scenes/GameCore.unity"};
+        string[] levels = new string[] {"Assets/Scenes/GameCore.unity", "Assets/Scenes/LastScene.unity"};
         BuildPipeline.BuildPlayer(levels, path + $"/{gameName}.html", BuildTarget.WebGL, BuildOptions.None);
     }
     
