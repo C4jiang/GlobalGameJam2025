@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class GameFlow : MonoBehaviour {
     private int _curLevelNum = 0;
+    public int CurLevelNum => _curLevelNum;
 
     private void Awake() {
         _curLevelNum = 0;
@@ -22,14 +23,15 @@ public class GameFlow : MonoBehaviour {
         if (EDialogType.Succ == dialogType) {
             _curLevelNum++;
             Messenger.Broadcast(MsgType.CreateCustomer, _curLevelNum);
-        } 
-        if (_curLevelNum>6) {
-        Messenger.Broadcast(MsgType.StartEnding);
-        UnityEngine.SceneManagement.SceneManager.LoadScene("LastScene");
-    }
+        }
+        
+        if (EDialogType.Intro == dialogType) {
+            Messenger.Broadcast(MsgType.BlowBubble, 1);
+        }
     }
 
     private void OnNoCustomer() {
         Messenger.Broadcast(MsgType.StartEnding);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("LastScene");
     }
 }

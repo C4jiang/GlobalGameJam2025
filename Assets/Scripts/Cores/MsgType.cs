@@ -94,6 +94,7 @@ public static class MsgType
     // Test Only
     public static string TestEvent = nameof(TestEvent);
 
+    public static string BlowBubble = nameof(BlowBubble); // 创建泡泡
     // Water Module
     public static string RefreshWaterCnt = nameof(RefreshWaterCnt); // 刷新UI界面魔药份数
     public static string BlowSuccess = nameof(BlowSuccess); // 稳定度小于等于阈值，吹泡泡成功

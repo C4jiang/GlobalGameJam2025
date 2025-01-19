@@ -7,12 +7,12 @@ public static class PolygonSimilarity
     public static float CalculateSimilarity(List<Vector2> polygon1, List<Vector2> polygon2)
     {
         // Step 1: Normalize polygons
-        List<Vector2> normalizedPolygon1 = NormalizePolygon(polygon1);
-        List<Vector2> normalizedPolygon2 = NormalizePolygon(polygon2);
+        // List<Vector2> normalizedPolygon1 = NormalizePolygon(polygon1);
+        // List<Vector2> normalizedPolygon2 = NormalizePolygon(polygon2);
 
         // Step 2: Calculate deviation arrays
-        float[] deviations1 = CalculateDeviations(normalizedPolygon1);
-        float[] deviations2 = CalculateDeviations(normalizedPolygon2);
+        float[] deviations1 = CalculateDeviations(polygon1);
+        float[] deviations2 = CalculateDeviations(polygon2);
 
         // Step 3: Calculate standard deviation of differences
         float similarity = CalculateStandardDeviation(deviations1, deviations2);

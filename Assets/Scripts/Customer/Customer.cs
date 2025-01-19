@@ -1,15 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class Customer : MonoBehaviour
 {
     public LevelData levelData;
     public int levelNumber;
-    public bool TestRun;
 
     private CustomerDialog _curCustomDialog;
     private CustomerAvatar _curCustomAvatar;
+    
+    public float CustomTimer => _customTimer;
+    private float _customTimer = 0f;
+    private bool _customStart = false;
+    
+    Coroutine _curDialogCoroutine;
 
     // Start is called before the first frame update
     void Start()
@@ -26,9 +32,8 @@ public class Customer : MonoBehaviour
     }
 
     private void Update() {
-        if (TestRun) {
-            OnCreateCustomer(levelNumber);
-            TestRun = false;
+        if (_customStart) {
+            _customTimer += Time.deltaTime;
         }
     }
 
@@ -39,9 +44,12 @@ public class Customer : MonoBehaviour
         if (level != null && level.prefab != null)
         {
             GameObject prefabInstance = Instantiate(level.prefab, transform);
-            prefabInstance.transform.localPosition = Vector3.zero; // 可根据需要调整位置
-            _curCustomDialog = prefabInstance.GetComponent<CustomerDialog>();
+            prefabInstance.GetComponent<RectTransform>().anchoredPosition = Vector2.left * 1000; // 可根据需要调整位置
+            prefabInstance.GetComponent<RectTransform>().DOAnchorPos(Vector2.right * 200, 9f).SetEase(Ease.OutCubic);
             _curCustomAvatar = prefabInstance.GetComponent<CustomerAvatar>();
+            
+            GameObject dialogInstance = Instantiate(level.dialogPrefab, transform);
+            _curCustomDialog = dialogInstance.GetComponent<CustomerDialog>();
 
             OnCustomIntro();
         }
@@ -53,37 +61,56 @@ public class Customer : MonoBehaviour
     }
 
     private void OnBubbleSuccess() {
-        _curCustomDialog.PlayDialog(EDialogType.Succ);
+        if (_curDialogCoroutine != null)
+        {
+            StopCoroutine(_curDialogCoroutine);
+            _curDialogCoroutine = null;
+        }
+        _curCustomAvatar.PlayAnimation("Success");
+        _curCustomAvatar.GetComponent<RectTransform>().DOAnchorPos(Vector2.left * 1000, 9f).SetEase(Ease.OutCubic);
+        _curDialogCoroutine = StartCoroutine(_curCustomDialog.PlayDialog(GetLevel(levelNumber).successBubbleDialogs, EDialogType.Succ));
         // todo 播放成功动画
     }
 
     private void OnBubbleFail() {
-        _curCustomDialog.PlayDialog(EDialogType.Fail);
-        // todo 播放失败动画
+        if (_curDialogCoroutine != null)
+        {
+            StopCoroutine(_curDialogCoroutine);
+            _curDialogCoroutine = null;
+        }
+        _curDialogCoroutine = StartCoroutine(_curCustomDialog.PlayDialog(GetLevel(levelNumber).failBubbleDialogs, EDialogType.Fail));
     }
 #endregion
 
 #region  utils
-    private void OnCustomIntro() {
-        _curCustomAvatar.PlayAnimation("Intro"); // example
-        _curCustomDialog.PlayDialog(EDialogType.Intro);
+    private void OnCustomIntro()
+    {
+        StartCoroutine(CustomIntro());
     }
 
-    private LevelData.Level GetLevel(int levelNumber)
+    IEnumerator CustomIntro()
     {
-        if (levelData == null || levelData.GetLevels() == null)
+        _curCustomAvatar.PlayAnimation("Idle");
+        yield return new WaitForSeconds(2.5f);
+        _curCustomAvatar.PlayAnimation("Speak");
+        yield return _curCustomDialog.PlayDialog(GetLevel(levelNumber).introDialogs, EDialogType.Intro);
+        _curCustomAvatar.PlayAnimation("Idle");
+        _customStart = true;
+    }
+
+    private LevelData.Level GetLevel(int levelIndex)
+    {
+        var fullLevels = levelData.GetLevels();
+        if (levelIndex >= 0 && levelIndex < fullLevels.Length)
         {
+            Debug.Log(levelIndex);
+            return fullLevels[levelIndex];
+        }
+        else
+        {
+            Debug.Log("no levels!!");
             return null;
         }
-
-        foreach (LevelData.Level level in levelData.GetLevels())
-        {
-            if (level.levelNumber == levelNumber)
-            {
-                return level;
-            }
-        }
-        return null;
     }
 
     private void CleanCustom() {
@@ -93,7 +120,13 @@ public class Customer : MonoBehaviour
             Destroy(_curCustomAvatar);
             _curCustomAvatar = null;
         }
-        _curCustomDialog = null;
+        if (_curCustomDialog != null)
+        {
+            Destroy(_curCustomDialog);
+            _curCustomDialog = null;
+        }
+        _customStart = false;
+        _customTimer = 0f;
     }
 #endregion
 }

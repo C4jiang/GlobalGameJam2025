@@ -1,12 +1,12 @@
 using UnityEngine;
 public class CustomerAvatar : MonoBehaviour {
-    private Animation _avatarAnimation;
+    private Animator _avatarAnimator;
 
     private void Awake() {
-        _avatarAnimation = GetComponent<Animation>();
+        _avatarAnimator = GetComponent<Animator>();
     }
 
     public void PlayAnimation(string animationName) {
-        // todo
+        _avatarAnimator.SetTrigger(animationName);
     }
 }

@@ -17,7 +17,13 @@ MonoBehaviour:
     pattern:
       size: 3
       positions:
-      - {x: 1000, y: 500, z: 0}
-      - {x: 1900, y: 500, z: 0}
-      - {x: 1450, y: 1000, z: 0}
+      - {x: 0.01, y: 0}
+      - {x: 0, y: 0.01}
+      - {x: -0.01, y: 0}
+      - {x: 0, y: -0.01}
     prefab: {fileID: 2273790486527826473, guid: cb5f784bcd7dad448983cb7a24508eba, type: 3}
+    dialogPrefab: {fileID: 5101286543228965518, guid: ea724edf39d03794d93b95e947509d24, type: 3}
+    dialogs:
+    - "\u6211\u7684\u73A9\u5177\u718A\u6CA1\u4E86"
+    - "\u6211\u8981\u600E\u4E48\u6D3B\uFF1F\uFF1F"
+    dialog: 
