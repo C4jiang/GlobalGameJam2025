@@ -123,17 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &1944243447 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2911556727620848728, guid: 0e83d4528951dac42a8d97c07859d9f7, type: 3}
-  m_PrefabInstance: {fileID: 3748471020268451375}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f5a1137359190b4ea03f0ee18fc5f56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &3748471020268451375
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -185,30 +174,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 986211601071864425, guid: 0e83d4528951dac42a8d97c07859d9f7, type: 3}
-      propertyPath: flow
+    - target: {fileID: 1233993441819877573, guid: 0e83d4528951dac42a8d97c07859d9f7, type: 3}
+      propertyPath: onTextShowed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1944243447}
-    - target: {fileID: 986211601071864425, guid: 0e83d4528951dac42a8d97c07859d9f7, type: 3}
-      propertyPath: levelNumber
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1040018208459398646, guid: 0e83d4528951dac42a8d97c07859d9f7, type: 3}
-      propertyPath: _flow
-      value: 
-      objectReference: {fileID: 1944243447}
-    - target: {fileID: 1040018208459398646, guid: 0e83d4528951dac42a8d97c07859d9f7, type: 3}
-      propertyPath: _fullLevelData
-      value: 
-      objectReference: {fileID: 11400000, guid: 59723ce36a4b77141ab6528464e070d1, type: 2}
-    - target: {fileID: 1233993442150311605, guid: 0e83d4528951dac42a8d97c07859d9f7, type: 3}
-      propertyPath: levelNumber
-      value: 1
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 3748471018806203014, guid: 0e83d4528951dac42a8d97c07859d9f7, type: 3}
     - target: {fileID: 8506390456043626586, guid: 0e83d4528951dac42a8d97c07859d9f7, type: 3}
       propertyPath: m_Name
       value: GamePlayRoot
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3748471018806203014, guid: 0e83d4528951dac42a8d97c07859d9f7, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e83d4528951dac42a8d97c07859d9f7, type: 3}
