@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using Sirenix.OdinInspector;
 
 public class GameFlow : MonoBehaviour {
     public int _curLevelNum = 0;
@@ -29,9 +31,10 @@ public class GameFlow : MonoBehaviour {
             Messenger.Broadcast(MsgType.BlowBubble, 1);
         }
     }
-
+    [Button("NoCustomer")]
     private void OnNoCustomer() {
         Messenger.Broadcast(MsgType.StartEnding);
-        UnityEngine.SceneManagement.SceneManager.LoadScene("LastScene");
+        StopAllCoroutines();
+        SceneManager.LoadScene("LastScene", LoadSceneMode.Single);
     }
 }

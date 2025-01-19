@@ -27,6 +27,7 @@ public class CustomerDialog : MonoBehaviour {
 
     public IEnumerator PlayDialog(List<string> dialogs, EDialogType dialogType) {
         _curDialogType = dialogType;
+        dialogText.text = "";
         _canvasGroup.DOFade(1, 1.6f).SetEase(Ease.OutCubic);
         _canvasGroup.interactable = true;
         _canvasGroup.blocksRaycasts = true;
