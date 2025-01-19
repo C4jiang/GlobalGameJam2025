@@ -6,6 +6,7 @@ using DG.Tweening;
 using UnityEngine.UI;
 using Sirenix.OdinInspector;
 using Febucci.UI;
+using I2.Loc;
 using UnityEngine.UIElements.Experimental;
 
 public class StartIntro : MonoBehaviour {
@@ -29,7 +30,8 @@ public class StartIntro : MonoBehaviour {
         canvasGroup.blocksRaycasts = true;
         yield return new WaitForSeconds(0.7f);
         for(var i = 0; i < dialogList.Count; i++){
-            dialogText.transform.GetComponent<TextAnimatorPlayer>().ShowText(dialogList[i]);
+            string dialog = LocalizationManager.GetTranslation(dialogList[i]);
+            dialogText.transform.GetComponent<TextAnimatorPlayer>().ShowText(dialog);
             isPlaying = true;
             while(true){
                 yield return null;

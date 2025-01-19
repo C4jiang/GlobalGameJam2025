@@ -36,7 +36,6 @@ public class CustomerDialog : MonoBehaviour {
         for(var i = 0; i < dialogs.Count; i++){
             var TRANS = LocalizationManager.GetTranslation(dialogs[i]);
             dialogText.transform.GetComponent<TextAnimatorPlayer>().ShowText(TRANS);
-        
             isPlaying = true;
             while(true){
                 yield return null;
