@@ -7,6 +7,7 @@ using UnityEngine.UI;
 using Sirenix.OdinInspector;
 using Febucci.UI;
 using I2.Loc;
+
 public class CustomerDialog : MonoBehaviour {
     private EDialogType _curDialogType;
     public TextMeshProUGUI dialogText;
