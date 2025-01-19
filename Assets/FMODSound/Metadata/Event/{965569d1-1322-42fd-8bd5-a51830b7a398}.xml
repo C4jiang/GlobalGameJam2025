@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.01.00">
+<objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{965569d1-1322-42fd-8bd5-a51830b7a398}">
 		<property name="name">
 			<value>爆炸-三角波</value>
@@ -53,7 +53,7 @@
 			<destination>{75ca7d99-b989-443e-bbfd-5fd545c804bb}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{071335f1-ea34-4bb5-9656-f09bcf84a3a9}</destination>
+			<destination>{1fb4f38a-2894-4cb6-9fdc-5d46b469d8f1}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{e28035ad-1de1-4e76-8911-9b5e616fdd79}" />

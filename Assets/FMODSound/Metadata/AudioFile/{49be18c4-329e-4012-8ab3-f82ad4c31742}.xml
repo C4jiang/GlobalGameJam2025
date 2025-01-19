@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.01.00">
-	<object class="AudioFile" id="{e0ddbaa2-7b2a-437c-91c9-0298f516b771}">
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{49be18c4-329e-4012-8ab3-f82ad4c31742}">
 		<property name="assetPath">
-			<value>Music/Example/mainTheme.mp3</value>
+			<value>Music/Bubbles3.mp3</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>
@@ -11,10 +11,10 @@
 			<value>44.0999985</value>
 		</property>
 		<property name="channelCount">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<property name="length">
-			<value>42.631836734693877</value>
+			<value>19.199999999999999</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{a707cf8a-b5cf-416c-b3bf-8ad85624b296}</destination>

@@ -15,10 +15,10 @@ MonoBehaviour:
   Path: Assets/FMODSound/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638711503268912473
+  lastModified: 638728841085474522
   FileSizes:
   - Name: Desktop
-    Value: 1254
+    Value: 1412
   Exists: 1
 --- !u!114 &-7971293648390209963
 MonoBehaviour:
@@ -44,10 +44,10 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
+  MinDistance: 1
+  MaxDistance: 20
   Length: 42631
---- !u!114 &-7784799226006002261
+--- !u!114 &-5449586429316599308
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -57,23 +57,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Example/mainTheme
+  m_Name: event:/Music/Bubbles3
   m_EditorClassIdentifier: 
-  Path: event:/Music/Example/mainTheme
+  Path: event:/Music/Bubbles3
   Guid:
-    Data1: -709097759
-    Data2: 1237760877
-    Data3: 1098352816
-    Data4: -77373874
+    Data1: 249184463
+    Data2: 1078494873
+    Data3: -1153128801
+    Data4: 1797336328
   Banks:
   - {fileID: 6986866336171032008}
+  - {fileID: 5697886982997142088}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 42631
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 19200
 --- !u!114 &-5325778656675999256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,9 +99,37 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
+  MinDistance: 1
+  MaxDistance: 20
   Length: 548
+--- !u!114 &-4228928735397119953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Bubbles2
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Bubbles2
+  Guid:
+    Data1: 1518673491
+    Data2: 1136025661
+    Data3: 1477527981
+    Data4: 2047589023
+  Banks:
+  - {fileID: 6986866336171032008}
+  - {fileID: 5697886982997142088}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 19356
 --- !u!114 &-2599590899945577809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,8 +154,8 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
+  MinDistance: 1
+  MaxDistance: 20
   Length: 496
 --- !u!114 &-751270750146419718
 MonoBehaviour:
@@ -152,9 +181,37 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
+  MinDistance: 1
+  MaxDistance: 20
   Length: 2037
+--- !u!114 &-507304160542762387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Bubbles1
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Bubbles1
+  Guid:
+    Data1: 287512415
+    Data2: 1306059069
+    Data3: -2024850283
+    Data4: 2050460241
+  Banks:
+  - {fileID: 6986866336171032008}
+  - {fileID: 5697886982997142088}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 21760
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,7 +230,6 @@ MonoBehaviour:
   - {fileID: 6986866336171032008}
   - {fileID: 1748146005268497404}
   EditorEvents:
-  - {fileID: -7784799226006002261}
   - {fileID: 5088399704889293852}
   - {fileID: -751270750146419718}
   - {fileID: -7971293648390209963}
@@ -182,12 +238,15 @@ MonoBehaviour:
   - {fileID: 804580743463770049}
   - {fileID: 456654180047012698}
   - {fileID: 7718449772874617610}
+  - {fileID: -4228928735397119953}
+  - {fileID: -507304160542762387}
+  - {fileID: -5449586429316599308}
   EditorParameters: []
   MasterBanks:
   - {fileID: 5697886982997142088}
   StringsBanks:
   - {fileID: -8235542810793178186}
-  cacheTime: 638711503268952477
+  cacheTime: 638728841085808684
   cacheVersion: 131608
 --- !u!114 &456654180047012698
 MonoBehaviour:
@@ -213,8 +272,8 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
+  MinDistance: 1
+  MaxDistance: 20
   Length: 1097
 --- !u!114 &804580743463770049
 MonoBehaviour:
@@ -240,8 +299,8 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
+  MinDistance: 1
+  MaxDistance: 20
   Length: 940
 --- !u!114 &1748146005268497404
 MonoBehaviour:
@@ -258,10 +317,10 @@ MonoBehaviour:
   Path: Assets/FMODSound/Build/Desktop/SoundEffect.bank
   Name: SoundEffect
   StudioPath: bank:/SoundEffect
-  lastModified: 638711503268952477
+  lastModified: 638728841085808684
   FileSizes:
   - Name: Desktop
-    Value: 107616
+    Value: 107840
   Exists: 1
 --- !u!114 &5088399704889293852
 MonoBehaviour:
@@ -287,8 +346,8 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
+  MinDistance: 1
+  MaxDistance: 20
   Length: 2403
 --- !u!114 &5697886982997142088
 MonoBehaviour:
@@ -305,10 +364,10 @@ MonoBehaviour:
   Path: Assets/FMODSound/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638711503268892456
+  lastModified: 638728841085440011
   FileSizes:
   - Name: Desktop
-    Value: 1012
+    Value: 729696
   Exists: 1
 --- !u!114 &6986866336171032008
 MonoBehaviour:
@@ -325,10 +384,10 @@ MonoBehaviour:
   Path: Assets/FMODSound/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638711503268932470
+  lastModified: 638728839241087443
   FileSizes:
   - Name: Desktop
-    Value: 413408
+    Value: 728896
   Exists: 1
 --- !u!114 &7718449772874617610
 MonoBehaviour:
@@ -354,6 +413,6 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
+  MinDistance: 1
+  MaxDistance: 20
   Length: 1044

@@ -212,7 +212,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1422219040
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2704,15 +2704,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd0b9beb2461e624bb5532e7d6acb4bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BGMSettingRatio: 0.8
+  BGMSettingRatio: 0.5
   SFXSettingRatio: 0.3
   titleBGM:
     Guid:
-      Data1: -709097759
-      Data2: 1237760877
-      Data3: 1098352816
-      Data4: -77373874
-    Path: event:/Music/Example/mainTheme
+      Data1: 287512415
+      Data2: 1306059069
+      Data3: -2024850283
+      Data4: 2050460241
+    Path: event:/Music/Bubbles1
   musicEffectTable: []
 --- !u!114 &2911556727620848728
 MonoBehaviour:

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.01.00">
+<objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{56109cba-dc75-4f74-8211-3288091a2209}">
 		<property name="name">
 			<value>shootbullet 1</value>
@@ -53,7 +53,7 @@
 			<destination>{17e28a91-7e62-48fe-b891-952a053a016b}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{071335f1-ea34-4bb5-9656-f09bcf84a3a9}</destination>
+			<destination>{1fb4f38a-2894-4cb6-9fdc-5d46b469d8f1}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{c6a116e0-0852-49e2-bacf-320366c7f921}" />

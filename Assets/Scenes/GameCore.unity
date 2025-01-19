@@ -178,10 +178,6 @@ PrefabInstance:
       propertyPath: onTextShowed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 3748471018806203014, guid: 0e83d4528951dac42a8d97c07859d9f7, type: 3}
-    - target: {fileID: 5667733139821162610, guid: 0e83d4528951dac42a8d97c07859d9f7, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8506390456043626586, guid: 0e83d4528951dac42a8d97c07859d9f7, type: 3}
       propertyPath: m_Name
       value: GamePlayRoot
