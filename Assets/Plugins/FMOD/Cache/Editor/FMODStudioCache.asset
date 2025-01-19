@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: Assets/FMODSound/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638728841085474522
+  lastModified: 638728860696335147
   FileSizes:
   - Name: Desktop
     Value: 1412
@@ -66,8 +66,8 @@ MonoBehaviour:
     Data3: -1153128801
     Data4: 1797336328
   Banks:
-  - {fileID: 6986866336171032008}
   - {fileID: 5697886982997142088}
+  - {fileID: 6986866336171032008}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -121,8 +121,8 @@ MonoBehaviour:
     Data3: 1477527981
     Data4: 2047589023
   Banks:
-  - {fileID: 6986866336171032008}
   - {fileID: 5697886982997142088}
+  - {fileID: 6986866336171032008}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -203,8 +203,8 @@ MonoBehaviour:
     Data3: -2024850283
     Data4: 2050460241
   Banks:
-  - {fileID: 6986866336171032008}
   - {fileID: 5697886982997142088}
+  - {fileID: 6986866336171032008}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -246,7 +246,7 @@ MonoBehaviour:
   - {fileID: 5697886982997142088}
   StringsBanks:
   - {fileID: -8235542810793178186}
-  cacheTime: 638728841085808684
+  cacheTime: 638728860696465080
   cacheVersion: 131608
 --- !u!114 &456654180047012698
 MonoBehaviour:
@@ -317,7 +317,7 @@ MonoBehaviour:
   Path: Assets/FMODSound/Build/Desktop/SoundEffect.bank
   Name: SoundEffect
   StudioPath: bank:/SoundEffect
-  lastModified: 638728841085808684
+  lastModified: 638728860696465080
   FileSizes:
   - Name: Desktop
     Value: 107840
@@ -364,7 +364,7 @@ MonoBehaviour:
   Path: Assets/FMODSound/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638728841085440011
+  lastModified: 638728860696264915
   FileSizes:
   - Name: Desktop
     Value: 729696
@@ -384,7 +384,7 @@ MonoBehaviour:
   Path: Assets/FMODSound/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638728839241087443
+  lastModified: 638728860696395088
   FileSizes:
   - Name: Desktop
     Value: 728896
