@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using I2.Loc;
 
 public class Customer : MonoBehaviour
 {
     public LevelData levelData;
-    public int levelNumber;
+    public GameFlow flow;
+    public int levelNumber => flow.CurLevelNum;
 
     private CustomerDialog _curCustomDialog;
     private CustomerAvatar _curCustomAvatar;

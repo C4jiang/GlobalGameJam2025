@@ -6,6 +6,7 @@ using DG.Tweening;
 using UnityEngine.UI;
 using Sirenix.OdinInspector;
 using Febucci.UI;
+using I2.Loc;
 public class CustomerDialog : MonoBehaviour {
     private EDialogType _curDialogType;
     public TextMeshProUGUI dialogText;
@@ -31,7 +32,8 @@ public class CustomerDialog : MonoBehaviour {
         _canvasGroup.blocksRaycasts = true;
         yield return new WaitForSeconds(1.5f);
         for(var i = 0; i < dialogs.Count; i++){
-            dialogText.transform.GetComponent<TextAnimatorPlayer>().ShowText(dialogs[i]);
+            var TRANS = LocalizationManager.GetTranslation(dialogs[i]);
+            dialogText.transform.GetComponent<TextAnimatorPlayer>().ShowText(TRANS);
         
             isPlaying = true;
             while(true){

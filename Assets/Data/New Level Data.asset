@@ -26,4 +26,38 @@ MonoBehaviour:
     dialogs:
     - "\u6211\u7684\u73A9\u5177\u718A\u6CA1\u4E86"
     - "\u6211\u8981\u600E\u4E48\u6D3B\uFF1F\uFF1F"
+    introDialogs:
+    - "\u5DE8\u5927\u7684\u718A\uFF0C\u6211\u662F\u5DE8\u5927\u7684\u718A\uFF01\uFF01"
+    - "\u7099\u70ED\u7684\u5FC3\u810F\uFF0C\u5F3A\u5927\u7684\u529B\u91CF"
+    - "\u6211\u662F\u65E0\u654C\u7684\u5B58\u5728"
+    successBubbleDialogs:
+    - "\u8C22\u8C22\u4F60"
+    - "\u771F\u7684\u5F88\u611F\u8C22\u4F60"
+    failBubbleDialogs:
+    - "\u653E\u4E0B\uFF01\u8BA9\u6211\u6765\uFF01"
+    idleDialogs: []
+    dialog: 
+  - levelNumber: 2
+    pattern:
+      size: 3
+      positions:
+      - {x: 0.007, y: 0.007}
+      - {x: 0.007, y: -0.007}
+      - {x: -0.007, y: -0.007}
+      - {x: -0.007, y: 0.007}
+    prefab: {fileID: 8987785136545791317, guid: 7c3a577e847ac694b9c97bd47eabbc65, type: 3}
+    dialogPrefab: {fileID: 5101286543228965518, guid: ea724edf39d03794d93b95e947509d24, type: 3}
+    dialogs:
+    - "\u6211\u7684\u73A9\u5177\u718A\u6CA1\u4E86"
+    - "\u6211\u8981\u600E\u4E48\u6D3B\uFF1F\uFF1F"
+    introDialogs:
+    - "\u4F60\u8776\u6765\u4E86"
+    - "\u4F60\u8776\u6765\u4E86\uFF01\uFF01"
+    - "\u4F60\u8776\u6765\u4E86\uFF01\uFF01\uFF01\uFF01"
+    successBubbleDialogs:
+    - "\u8C22\u8C22\u4F60\u8C22\u8C22\u4F60\u8C22\u8C22\u4F60\u8C22\u8C22\u4F60"
+    - "\u8C22\u8C22\u4F60\u8C22\u8C22\u4F60\u8C22\u8C22\u4F60\u8C22\u8C22\u4F60\u8C22\u8C22\u4F60"
+    failBubbleDialogs:
+    - "\u98DE\u4E00\u4E2A"
+    idleDialogs: []
     dialog: 

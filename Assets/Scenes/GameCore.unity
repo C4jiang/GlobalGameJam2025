@@ -186,6 +186,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 986211601071864425, guid: 0e83d4528951dac42a8d97c07859d9f7, type: 3}
+      propertyPath: flow
+      value: 
+      objectReference: {fileID: 1944243447}
+    - target: {fileID: 986211601071864425, guid: 0e83d4528951dac42a8d97c07859d9f7, type: 3}
       propertyPath: levelNumber
       value: 0
       objectReference: {fileID: 0}
