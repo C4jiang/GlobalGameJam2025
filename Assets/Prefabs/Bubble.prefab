@@ -127,3 +127,32 @@ MonoBehaviour:
   similarValue: 0.0015
   similarCnt: 0
   similarCntMax: 3
+  similarity: 10
+  bubbleEffect:
+    Guid:
+      Data1: 1784058142
+      Data2: 1140684530
+      Data3: -1698653512
+      Data4: -1064828118
+    Path: "event:/SoundEffect/\u634F\u6CE1\u6CE12"
+  bubbleKill:
+    Guid:
+      Data1: -1549029319
+      Data2: 1185529767
+      Data3: -1438423128
+      Data4: -649681341
+    Path: "event:/SoundEffect/\u6CE1\u6CE1\u7834\u88C2"
+  bubbleBlow:
+    Guid:
+      Data1: -1830122244
+      Data2: 1140523292
+      Data3: 1966569360
+      Data4: 336046821
+    Path: "event:/SoundEffect/\u97F3\u6548\uFF1A\u5439\u6CE1\u6CE1"
+  bubbleSuccess:
+    Guid:
+      Data1: -36690307
+      Data2: 1331685580
+      Data3: -117391484
+      Data4: 579130468
+    Path: event:/SoundEffect/witness_success

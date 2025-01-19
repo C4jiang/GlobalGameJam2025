@@ -6,6 +6,7 @@ using Sirenix.OdinInspector;
 using System.Linq;
 using System.Timers;
 using DG.Tweening;
+using FMODUnity;
 
 public class Bubble : MonoBehaviour
 {
@@ -48,11 +49,16 @@ public class Bubble : MonoBehaviour
     public float similarValue = 0.0015f;
     public int similarCnt = 0;
     public int similarCntMax = 3;
-        
+    public float similarity = 10;
     
+    public EventReference bubbleEffect;
+    public EventReference bubbleKill;
+    public EventReference bubbleBlow;
+    public EventReference bubbleSuccess;
     
     public void Blow(float stability, BubbleManager manager)
     {
+        Messenger.Broadcast(MsgType.PlaySE, bubbleBlow);
         _bubbleManager = manager;
         mainCamera = Camera.main;
         lightDirection = Vector3.forward;
@@ -88,6 +94,10 @@ public class Bubble : MonoBehaviour
 
     void ShapeBubble()
     {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Messenger.Broadcast(MsgType.PlaySE, bubbleEffect);
+        }
         if (Input.GetMouseButton(0))
         {
             if (Physics.Raycast(mainCamera.ScreenPointToRay(Input.mousePosition), out RaycastHit hitInfo))
@@ -145,7 +155,7 @@ public class Bubble : MonoBehaviour
             judgeTimer = 0;
             if (_curLevelData != null)
             {
-                var similarity = CalculateBubbleSimilarity();
+                similarity = CalculateBubbleSimilarity();
                 if (similarity < similarValue)
                 {
                     similarCnt ++;
@@ -166,11 +176,13 @@ public class Bubble : MonoBehaviour
     void Success()
     {
         Messenger.Broadcast(MsgType.BubbleSuccess);
+        Messenger.Broadcast(MsgType.PlaySE, bubbleSuccess);
         Kill();
     }
 
-    void Kill()
+    public void Kill()
     {
+        Messenger.Broadcast(MsgType.PlaySE, bubbleKill);
         Destroy(gameObject);
     }
     

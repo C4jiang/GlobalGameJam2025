@@ -15,11 +15,38 @@ MonoBehaviour:
   Path: Assets/FMODSound/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638728841085474522
+  lastModified: 638728918989325540
   FileSizes:
   - Name: Desktop
-    Value: 1412
+    Value: 1966
   Exists: 1
+--- !u!114 &-8061030392475545579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SoundEffect/witness_success
+  m_EditorClassIdentifier: 
+  Path: event:/SoundEffect/witness_success
+  Guid:
+    Data1: -36690307
+    Data2: 1331685580
+    Data3: -117391484
+    Data4: 579130468
+  Banks:
+  - {fileID: 1748146005268497404}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1536
 --- !u!114 &-7971293648390209963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47,6 +74,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 42631
+--- !u!114 &-7315395083914457743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/SoundEffect/\u634F\u6CE1\u6CE12"
+  m_EditorClassIdentifier: 
+  Path: "event:/SoundEffect/\u634F\u6CE1\u6CE12"
+  Guid:
+    Data1: 1784058142
+    Data2: 1140684530
+    Data3: -1698653512
+    Data4: -1064828118
+  Banks:
+  - {fileID: 1748146005268497404}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 280
+--- !u!114 &-5659371224026258964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/SoundEffect/\u634F\u6CE1\u6CE1"
+  m_EditorClassIdentifier: 
+  Path: "event:/SoundEffect/\u634F\u6CE1\u6CE1"
+  Guid:
+    Data1: 2059813960
+    Data2: 1333980733
+    Data3: -499829100
+    Data4: 1277442919
+  Banks:
+  - {fileID: 1748146005268497404}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2064
 --- !u!114 &-5449586429316599308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,7 +155,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 19200
+  Length: 16650
 --- !u!114 &-5325778656675999256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,7 +210,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 19356
+  Length: 16950
 --- !u!114 &-2599590899945577809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,6 +238,87 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 496
+--- !u!114 &-2352650185224448877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/SoundEffect/\u97F3\u6548\uFF1A\u6309\u94AE"
+  m_EditorClassIdentifier: 
+  Path: "event:/SoundEffect/\u97F3\u6548\uFF1A\u6309\u94AE"
+  Guid:
+    Data1: -1459514244
+    Data2: 1308396814
+    Data3: 2108643752
+    Data4: 1174543165
+  Banks:
+  - {fileID: 1748146005268497404}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 80
+--- !u!114 &-2313264950572187909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/SoundEffect/\u97F3\u6548\uFF1A\u6495\u7EB8"
+  m_EditorClassIdentifier: 
+  Path: "event:/SoundEffect/\u97F3\u6548\uFF1A\u6495\u7EB8"
+  Guid:
+    Data1: -1638136746
+    Data2: 1160137510
+    Data3: 1944720516
+    Data4: -1058215969
+  Banks:
+  - {fileID: 1748146005268497404}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1044
+--- !u!114 &-1657230302023881349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/SoundEffect/\u97F3\u6548\uFF1A\u7535\u89C6\u5E95\u566A"
+  m_EditorClassIdentifier: 
+  Path: "event:/SoundEffect/\u97F3\u6548\uFF1A\u7535\u89C6\u5E95\u566A"
+  Guid:
+    Data1: 741010592
+    Data2: 1283766768
+    Data3: -1809107044
+    Data4: 1123902429
+  Banks:
+  - {fileID: 1748146005268497404}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 15000
 --- !u!114 &-751270750146419718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,7 +373,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 21760
+  Length: 19806
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,13 +403,52 @@ MonoBehaviour:
   - {fileID: -4228928735397119953}
   - {fileID: -507304160542762387}
   - {fileID: -5449586429316599308}
+  - {fileID: -7315395083914457743}
+  - {fileID: 6474023785277540385}
+  - {fileID: 1545212404112902317}
+  - {fileID: -5659371224026258964}
+  - {fileID: -2313264950572187909}
+  - {fileID: 3382205241657565869}
+  - {fileID: -2352650185224448877}
+  - {fileID: -1657230302023881349}
+  - {fileID: 2437216627555309444}
+  - {fileID: 650415885824724037}
+  - {fileID: 132284496263615420}
+  - {fileID: -8061030392475545579}
   EditorParameters: []
   MasterBanks:
   - {fileID: 5697886982997142088}
   StringsBanks:
   - {fileID: -8235542810793178186}
-  cacheTime: 638728841085808684
+  cacheTime: 638728918991885140
   cacheVersion: 131608
+--- !u!114 &132284496263615420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/SoundEffect/\u97F3\u6548\uFF1A\u5439\u6CE1\u6CE1"
+  m_EditorClassIdentifier: 
+  Path: "event:/SoundEffect/\u97F3\u6548\uFF1A\u5439\u6CE1\u6CE1"
+  Guid:
+    Data1: -1830122244
+    Data2: 1140523292
+    Data3: 1966569360
+    Data4: 336046821
+  Banks:
+  - {fileID: 1748146005268497404}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 20
 --- !u!114 &456654180047012698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -275,6 +476,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1097
+--- !u!114 &650415885824724037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/SoundEffect/\u6CE1\u6CE12"
+  m_EditorClassIdentifier: 
+  Path: "event:/SoundEffect/\u6CE1\u6CE12"
+  Guid:
+    Data1: 1675882201
+    Data2: 1112115336
+    Data3: 29010110
+    Data4: -1436019757
+  Banks:
+  - {fileID: 1748146005268497404}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3144
 --- !u!114 &804580743463770049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -302,6 +530,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 940
+--- !u!114 &1545212404112902317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/SoundEffect/\u6CE1\u6CE1\u7834\u88C2"
+  m_EditorClassIdentifier: 
+  Path: "event:/SoundEffect/\u6CE1\u6CE1\u7834\u88C2"
+  Guid:
+    Data1: -1549029319
+    Data2: 1185529767
+    Data3: -1438423128
+    Data4: -649681341
+  Banks:
+  - {fileID: 1748146005268497404}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 30
 --- !u!114 &1748146005268497404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -317,11 +572,65 @@ MonoBehaviour:
   Path: Assets/FMODSound/Build/Desktop/SoundEffect.bank
   Name: SoundEffect
   StudioPath: bank:/SoundEffect
-  lastModified: 638728841085808684
+  lastModified: 638728918991885140
   FileSizes:
   - Name: Desktop
-    Value: 107840
+    Value: 2956096
   Exists: 1
+--- !u!114 &2437216627555309444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/SoundEffect/\u97F3\u6548\uFF1A\u89E6\u78B0\u6309\u94AE\uFF08\u7EB8\u5F20\uFF09"
+  m_EditorClassIdentifier: 
+  Path: "event:/SoundEffect/\u97F3\u6548\uFF1A\u89E6\u78B0\u6309\u94AE\uFF08\u7EB8\u5F20\uFF09"
+  Guid:
+    Data1: -1806108471
+    Data2: 1157625534
+    Data3: 2109780369
+    Data4: 2096737343
+  Banks:
+  - {fileID: 1748146005268497404}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4032
+--- !u!114 &3382205241657565869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/SoundEffect/\u6CE1\u6CE1"
+  m_EditorClassIdentifier: 
+  Path: "event:/SoundEffect/\u6CE1\u6CE1"
+  Guid:
+    Data1: 1333105528
+    Data2: 1141586189
+    Data3: 1303658420
+    Data4: 176817247
+  Banks:
+  - {fileID: 1748146005268497404}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6948
 --- !u!114 &5088399704889293852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -364,11 +673,38 @@ MonoBehaviour:
   Path: Assets/FMODSound/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638728841085440011
+  lastModified: 638728918989305536
   FileSizes:
   - Name: Desktop
     Value: 729696
   Exists: 1
+--- !u!114 &6474023785277540385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/SoundEffect/\u97F3\u6548\uFF1A\u6D77\u5E95\u5E95\u566A"
+  m_EditorClassIdentifier: 
+  Path: "event:/SoundEffect/\u97F3\u6548\uFF1A\u6D77\u5E95\u5E95\u566A"
+  Guid:
+    Data1: -859904726
+    Data2: 1219111887
+    Data3: -1220391241
+    Data4: 285237785
+  Banks:
+  - {fileID: 1748146005268497404}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 196362
 --- !u!114 &6986866336171032008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -384,7 +720,7 @@ MonoBehaviour:
   Path: Assets/FMODSound/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638728839241087443
+  lastModified: 638728896679882835
   FileSizes:
   - Name: Desktop
     Value: 728896
