@@ -1592,7 +1592,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1233993442150311606
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1627,6 +1627,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelData: {fileID: 11400000, guid: 59723ce36a4b77141ab6528464e070d1, type: 2}
   levelNumber: 1
+  flow: {fileID: 2911556727620848728}
+  scale: 240
 --- !u!1 &1233993442180315874
 GameObject:
   m_ObjectHideFlags: 0
