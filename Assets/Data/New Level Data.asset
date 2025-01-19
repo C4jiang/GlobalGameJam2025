@@ -17,10 +17,14 @@ MonoBehaviour:
     pattern:
       size: 3
       positions:
-      - {x: 0.01, y: 0}
-      - {x: 0, y: 0.01}
-      - {x: -0.01, y: 0}
-      - {x: 0, y: -0.01}
+      - {x: 0.013, y: 0}
+      - {x: 0.006, y: 0.006}
+      - {x: 0, y: 0.013}
+      - {x: -0.006, y: 0.006}
+      - {x: -0.013, y: 0}
+      - {x: -0.006, y: -0.006}
+      - {x: 0, y: -0.013}
+      - {x: 0.006, y: -0.006}
     prefab: {fileID: 2273790486527826473, guid: cb5f784bcd7dad448983cb7a24508eba, type: 3}
     dialogPrefab: {fileID: 5101286543228965518, guid: ea724edf39d03794d93b95e947509d24, type: 3}
     dialogs:
@@ -41,10 +45,14 @@ MonoBehaviour:
     pattern:
       size: 3
       positions:
-      - {x: 0.007, y: 0.007}
-      - {x: 0.007, y: -0.007}
-      - {x: -0.007, y: -0.007}
-      - {x: -0.007, y: 0.007}
+      - {x: 0.009, y: 0.009}
+      - {x: 0.009, y: 0}
+      - {x: 0.009, y: -0.009}
+      - {x: 0, y: -0.009}
+      - {x: -0.009, y: -0.009}
+      - {x: -0.009, y: 0}
+      - {x: 0, y: 0.009}
+      - {x: -0.009, y: 0.009}
     prefab: {fileID: 8987785136545791317, guid: 7c3a577e847ac694b9c97bd47eabbc65, type: 3}
     dialogPrefab: {fileID: 5101286543228965518, guid: ea724edf39d03794d93b95e947509d24, type: 3}
     dialogs:

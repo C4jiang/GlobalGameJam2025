@@ -188,7 +188,7 @@ public class Bubble : MonoBehaviour
         // var stopwatch = new System.Diagnostics.Stopwatch();
         // 简单的边缘检测算法（例如，基于顶点法线方向）
         bubbleEdgePoints.Clear();
-        Debug.Log(verticesCount);
+        // Debug.Log(verticesCount);
         // stopwatch = new System.Diagnostics.Stopwatch();
         // stopwatch.Start();
         Vector3[] normals = targetMesh.normals;

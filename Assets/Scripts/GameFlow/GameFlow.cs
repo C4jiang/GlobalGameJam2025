@@ -1,7 +1,7 @@
 using UnityEngine;
 
 public class GameFlow : MonoBehaviour {
-    private int _curLevelNum = 0;
+    public int _curLevelNum = 0;
     public int CurLevelNum => _curLevelNum;
 
     private void Awake() {
